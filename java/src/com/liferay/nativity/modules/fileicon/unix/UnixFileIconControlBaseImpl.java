@@ -14,6 +14,10 @@
 
 package com.liferay.nativity.modules.fileicon.unix;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+
 import com.liferay.nativity.Constants;
 import com.liferay.nativity.control.NativityControl;
 import com.liferay.nativity.control.NativityMessage;
@@ -61,5 +65,66 @@ public abstract class UnixFileIconControlBaseImpl extends FileIconControlBase {
 
 		nativityControl.sendMessage(message);
 	}
+	
+	@Override
+    public void removeFileIcon(String path) {
+        NativityMessage message = new NativityMessage(
+            Constants.REMOVE_FILE_ICONS, new String[] { path });
+
+        nativityControl.sendMessage(message);
+    }
+
+    @Override
+    public void removeFileIcons(String[] paths) {
+        NativityMessage message = new NativityMessage(
+            Constants.REMOVE_FILE_ICONS, paths);
+
+        nativityControl.sendMessage(message);
+    }
+	
+	@Override
+	public void setFileIcon(String path, int iconId) {
+        Map<String, Integer> map = new HashMap<String, Integer>(1);
+
+        map.put(path, iconId);
+
+        NativityMessage message = new NativityMessage(
+            Constants.SET_FILE_ICONS, map);
+
+        nativityControl.sendMessage(message);
+    }
+
+    @Override
+    public void setFileIcons(Map<String, Integer> fileIconsMap) {
+        Map<String, Integer> map = new HashMap<String, Integer>(
+            _messageBufferSize);
+
+        int i = 0;
+
+        for (Entry<String, Integer> entry : fileIconsMap.entrySet()) {
+            map.put(entry.getKey(), entry.getValue());
+
+            i++;
+
+            if (i == _messageBufferSize) {
+                NativityMessage message = new NativityMessage(
+                    Constants.SET_FILE_ICONS, map);
+
+                nativityControl.sendMessage(message);
+
+                map.clear();
+                i = 0;
+            }
+        }
+
+        if (i > 0) {
+            NativityMessage message = new NativityMessage(
+                Constants.SET_FILE_ICONS, map);
+
+            nativityControl.sendMessage(message);
+        }
+    }
+    
+    private static int _messageBufferSize = 500;
 
 }
