@@ -559,6 +559,7 @@ static NSInteger GOT_CALLBACK_RESPONSE = 2;
 	if ([imageIndex intValue] > 0)
 	{
 		[iconIds addObject:imageIndex];
+		return [iconIds autorelease];
 	}
 
 	// Why not just call [_connectedListenSocketsWithIconCallbacks count] directly?
