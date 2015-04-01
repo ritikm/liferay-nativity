@@ -33,3 +33,4 @@ windows/LiferayNativityShellExtensions/NativityTest/Release
 mac/LiferayNativityFinder/MethodNames.h
 mac/Build
 mac/Logs
+mac/info.plist
