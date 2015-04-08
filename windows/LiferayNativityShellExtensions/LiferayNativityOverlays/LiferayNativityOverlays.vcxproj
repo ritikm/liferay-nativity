@@ -21,6 +21,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{42EFEC79-5ACA-4F76-955F-15CE4340F6BC}</ProjectGuid>
     <RootNamespace>LiferayNativityOverlays</RootNamespace>
+    <ProjectName>BoxDesktopOverlays</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

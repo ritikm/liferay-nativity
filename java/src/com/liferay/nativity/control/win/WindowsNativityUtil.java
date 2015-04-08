@@ -65,17 +65,17 @@ public class WindowsNativityUtil {
 
 			_loaded = true;
 
-		    System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+		    System.out.println("Successfully loaded " + nativityDllName);
 			_logger.trace("Loaded WindowsNativityUtil DLL");
 		}
 		catch (UnsatisfiedLinkError ule) {
-		    System.err.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+		    System.err.println("ERROR: Failed to load " + nativityDllName);
 			_logger.error("Failed to load WindowsNativityUtil DLL");
 		}
 	}
 
 	private static final String _NATIVITY_DLL_NAME =
-		"LiferayNativityWindowsUtil";
+		"BoxDesktopWindowsUtil";
 
 	private static Logger _logger = LoggerFactory.getLogger(
 		WindowsNativityUtil.class.getName());
