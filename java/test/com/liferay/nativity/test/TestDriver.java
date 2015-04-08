@@ -232,9 +232,9 @@ public class TestDriver {
 	private static String _testFile =
 		"C:/Users/liferay/Documents/liferay-sync/Sync.pptx";
 	private static String _testFolder =
-		"C:/Users/liferay/Documents/liferay-sync/My Documents (test)/temp";
+		"C:\\Users\\sync\\Desktop\\Sarat";
 	private static String _testRootFolder =
-		"C:/Users/liferay/Documents/liferay-sync";
+		"C:\\Users\\sync\\Desktop";
 	private static int _waitTime = 1000;
 
 }

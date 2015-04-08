@@ -65,9 +65,11 @@ public class WindowsNativityUtil {
 
 			_loaded = true;
 
+		    System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 			_logger.trace("Loaded WindowsNativityUtil DLL");
 		}
 		catch (UnsatisfiedLinkError ule) {
+		    System.err.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 			_logger.error("Failed to load WindowsNativityUtil DLL");
 		}
 	}
