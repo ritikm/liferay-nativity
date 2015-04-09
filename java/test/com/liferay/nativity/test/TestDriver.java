@@ -224,17 +224,17 @@ public class TestDriver {
 		TestDriver.class.getName());
 
 	private static int _fileIconId = -1;
-	private static String _fileIconPath = "/Users/liferay/Desktop/test.icns";
+	private static String _fileIconPath = "C:\\LiferayTest\\RootFolder\\test.ico";
 	private static boolean _list = false;
 	private static ObjectMapper _objectMapper =
 		new ObjectMapper().configure(
 			JsonGenerator.Feature.AUTO_CLOSE_TARGET, false);
 	private static String _testFile =
-		"C:/Users/liferay/Documents/liferay-sync/Sync.pptx";
+		"C:\\LiferayTest\\RootFolder\\TestFolder\\TestFile.pptx";
 	private static String _testFolder =
-		"C:\\Users\\sync\\Desktop\\Sarat";
+		"C:\\LiferayTest\\RootFolder\\TestFolder";
 	private static String _testRootFolder =
-		"C:\\Users\\sync\\Desktop";
+		"C:\\LiferayTest\\RootFolder";
 	private static int _waitTime = 1000;
 
 }
