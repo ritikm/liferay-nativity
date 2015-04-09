@@ -24,7 +24,7 @@ if %errorlevel% neq 0 (
 echo building windows native utils...
 call ant build-windows-native-util
 if %errorlevel% neq 0 (
-    echo ERROR: failed to build windows native utils, with exit code %errorlevel%. Try opening liferay-nativity in eclipse, and force a rebuild, and then rerun this script.
+    echo ERROR: failed to build windows native utils, with exit code %errorlevel%
     exit /b %errorlevel%
 )
 
