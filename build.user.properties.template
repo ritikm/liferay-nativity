@@ -4,3 +4,18 @@ ms.sdk.7.1.dir=C:/Program Files/Microsoft SDKs/Windows/v7.1
 framework.dir=C:/Windows/Microsoft.NET/Framework64/v4.0.30319
 
 context.menu.guid={EBEDF891-A73A-4B35-91BB-57E3820C4BBC}
+
+overlay.name.synced=BoxDesktopSyncedOverlay
+overlay.guid.synced={1DEAD8A6-8293-411D-8201-C32E2D6F5005}
+overlay.id.synced=1
+overlay.path.synced=C:/Users/sync/Dev/streem/app/assets/overlays/Synced.ico
+
+overlay.name.pending=BoxDesktopPendingOverlay
+overlay.guid.pending={2EA3F9C2-C1EA-4A1A-9EA3-5DD0CA0491D7}
+overlay.id.pending=2
+overlay.path.pending=C:/Users/sync/Dev/streem/app/assets/overlays/Pending.ico
+
+overlay.name.problem=BoxDesktopProblemOverlay
+overlay.guid.problem={347F2A1A-695F-4791-8190-9E773C169490}
+overlay.id.problem=3
+overlay.path.problem=C:/Users/sync/Dev/streem/app/assets/overlays/Problem.ico
