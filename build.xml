@@ -134,6 +134,51 @@
         />
     </target>
 
+	<target name="build-windows-overlays-synced">
+        <ant dir="${nativity.dir}" target="build-windows-overlays" inheritAll="false">
+            <property name="nativity.dir" value="${nativity.dir}" />
+            <property name="dist.dir" value="${project.dir}/dist" />
+            <property name="target.os" value="windows" />
+            <property name="ms.sdk.7.1.dir" value="${ms.sdk.7.1.dir}" />
+            <property name="framework.dir" value="${framework.dir}" />
+
+            <property name="overlay.name" value="${overlay.name.synced}" />
+            <property name="overlay.guid" value="${overlay.guid.synced}" />
+            <property name="overlay.id" value="${overlay.id.synced}" />
+            <property name="overlay.path" value="${overlay.path.synced}" />
+        </ant>
+    </target>
+
+	<target name="build-windows-overlays-pending">
+        <ant dir="${nativity.dir}" target="build-windows-overlays" inheritAll="false">
+            <property name="nativity.dir" value="${nativity.dir}" />
+            <property name="dist.dir" value="${project.dir}/dist" />
+            <property name="target.os" value="windows" />
+            <property name="ms.sdk.7.1.dir" value="${ms.sdk.7.1.dir}" />
+            <property name="framework.dir" value="${framework.dir}" />
+
+            <property name="overlay.name" value="${overlay.name.pending}" />
+            <property name="overlay.guid" value="${overlay.guid.pending}" />
+            <property name="overlay.id" value="${overlay.id.pending}" />
+            <property name="overlay.path" value="${overlay.path.pending}" />
+        </ant>
+    </target>
+
+	<target name="build-windows-overlays-problem">
+        <ant dir="${nativity.dir}" target="build-windows-overlays" inheritAll="false">
+            <property name="nativity.dir" value="${nativity.dir}" />
+            <property name="dist.dir" value="${project.dir}/dist" />
+            <property name="target.os" value="windows" />
+            <property name="ms.sdk.7.1.dir" value="${ms.sdk.7.1.dir}" />
+            <property name="framework.dir" value="${framework.dir}" />
+
+            <property name="overlay.name" value="${overlay.name.problem}" />
+            <property name="overlay.guid" value="${overlay.guid.problem}" />
+            <property name="overlay.id" value="${overlay.id.problem}" />
+            <property name="overlay.path" value="${overlay.path.problem}" />
+        </ant>
+    </target>
+
 	<target name="build-windows-overlays">
 		<mkdir dir="${basedir}/dist/" />
 

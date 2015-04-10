@@ -35,4 +35,25 @@ if %errorlevel% neq 0 (
     exit /b %errorlevel%
 )
 
+echo building windows overlays (synced)...
+call ant build-windows-overlays-synced
+if %errorlevel% neq 0 (
+    echo ERROR: failed to build synced overlay, with exit code %errorlevel%
+    exit /b %errorlevel%
+)
+
+echo building windows overlays (pending)...
+call ant build-windows-overlays-pending
+if %errorlevel% neq 0 (
+    echo ERROR: failed to build pending overlay, with exit code %errorlevel%
+    exit /b %errorlevel%
+)
+
+echo building windows overlays (problem)...
+call ant build-windows-overlays-problem
+if %errorlevel% neq 0 (
+    echo ERROR: failed to build problem overlay, with exit code %errorlevel%
+    exit /b %errorlevel%
+)
+
 echo done
