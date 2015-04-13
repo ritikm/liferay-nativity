@@ -33,3 +33,9 @@ windows/LiferayNativityShellExtensions/NativityTest/Release
 mac/LiferayNativityFinder/MethodNames.h
 mac/Build
 mac/Logs
+mac/info.plist
+mac/LiferayNativity.xcworkspace/xcshareddata
+
+*.sdf
+*.suo
+java/lib/native

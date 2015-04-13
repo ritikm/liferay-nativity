@@ -34,7 +34,7 @@
 		</jar>
 	</target>
 
-	<target name="build-jni-headers">
+	<target name="build-jni-headers" depends="compile">
 		<javah destdir="${basedir}/windows/LiferayNativityShellExtensions/LiferayNativityWindowsUtil" classpath="${java.dir}/classes" class="com.liferay.nativity.control.win.WindowsNativityUtil"/>
 	</target>
 
@@ -52,13 +52,13 @@
         </exec>
 
         <copy
-            file="${basedir}/windows/LiferayNativityShellExtensions/Release/x64/LiferayNativityUtil_x64.dll"
-            toFile="${basedir}/dist/LiferayNativityUtil_x64.dll"
+            file="${basedir}/windows/LiferayNativityShellExtensions/Release/x64/BoxDesktopUtil_x64.dll"
+            toFile="${basedir}/dist/BoxDesktopUtil_x64.dll"
         />
 
         <copy
-            file="${basedir}/windows/LiferayNativityShellExtensions/Release/Win32/LiferayNativityUtil_x86.dll"
-            toFile="${basedir}/dist/LiferayNativityUtil_x86.dll"
+            file="${basedir}/windows/LiferayNativityShellExtensions/Release/Win32/BoxDesktopUtil_x86.dll"
+            toFile="${basedir}/dist/BoxDesktopUtil_x86.dll"
         />
     </target>
 
@@ -78,23 +78,23 @@
         </exec>
 
         <copy
-            file="${basedir}/windows/LiferayNativityShellExtensions/Release/x64/LiferayNativityWindowsUtil_x64.dll"
-            toFile="${basedir}/dist/LiferayNativityWindowsUtil_x64.dll"
+            file="${basedir}/windows/LiferayNativityShellExtensions/Release/x64/BoxDesktopWindowsUtil_x64.dll"
+            toFile="${basedir}/dist/BoxDesktopWindowsUtil_x64.dll"
         />
 
         <copy
-            file="${basedir}/windows/LiferayNativityShellExtensions/Release/Win32/LiferayNativityWindowsUtil_x86.dll"
-            toFile="${basedir}/dist/LiferayNativityWindowsUtil_x86.dll"
+            file="${basedir}/windows/LiferayNativityShellExtensions/Release/Win32/BoxDesktopWindowsUtil_x86.dll"
+            toFile="${basedir}/dist/BoxDesktopWindowsUtil_x86.dll"
         />
 
 		<copy
-            file="${basedir}/windows/LiferayNativityShellExtensions/Release/x64/LiferayNativityWindowsUtil_x64.dll"
-            toFile="${java.dir}/lib/native/LiferayNativityWindowsUtil_x64.dll"
+            file="${basedir}/windows/LiferayNativityShellExtensions/Release/x64/BoxDesktopWindowsUtil_x64.dll"
+            toFile="${java.dir}/lib/native/BoxDesktopWindowsUtil_x64.dll"
         />
 
         <copy
-            file="${basedir}/windows/LiferayNativityShellExtensions/Release/Win32/LiferayNativityWindowsUtil_x86.dll"
-            toFile="${java.dir}/lib/native/LiferayNativityWindowsUtil_x86.dll"
+            file="${basedir}/windows/LiferayNativityShellExtensions/Release/Win32/BoxDesktopWindowsUtil_x86.dll"
+            toFile="${java.dir}/lib/native/BoxDesktopWindowsUtil_x86.dll"
         />
     </target>
 
@@ -124,13 +124,13 @@
         </exec>
 
         <copy
-            file="${basedir}/windows/LiferayNativityShellExtensions/Release/x64/LiferayNativityContextMenus_x64.dll"
-            toFile="${basedir}/dist/LiferayNativityContextMenus_x64.dll"
+            file="${basedir}/windows/LiferayNativityShellExtensions/Release/x64/BoxDesktopContextMenus_x64.dll"
+            toFile="${basedir}/dist/BoxDesktopContextMenus_x64.dll"
         />
 
         <copy
-            file="${basedir}/windows/LiferayNativityShellExtensions/Release/Win32/LiferayNativityContextMenus_x86.dll"
-            toFile="${basedir}/dist/LiferayNativityContextMenus_x86.dll"
+            file="${basedir}/windows/LiferayNativityShellExtensions/Release/Win32/BoxDesktopContextMenus_x86.dll"
+            toFile="${basedir}/dist/BoxDesktopContextMenus_x86.dll"
         />
     </target>
 
@@ -170,12 +170,12 @@
         </exec>
 
 		<copy
-		    file="${basedir}/windows/LiferayNativityShellExtensions/Release/x64/LiferayNativityOverlays_x64.dll"
+		    file="${basedir}/windows/LiferayNativityShellExtensions/Release/x64/BoxDesktopOverlays_x64.dll"
 		    toFile="${basedir}/dist/${overlay.name}_x64.dll"
 		/>
 
         <copy
-            file="${basedir}/windows/LiferayNativityShellExtensions/Release/Win32/LiferayNativityOverlays_x86.dll"
+            file="${basedir}/windows/LiferayNativityShellExtensions/Release/Win32/BoxDesktopOverlays_x86.dll"
             toFile="${basedir}/dist/${overlay.name}_x86.dll"
         />
     </target>

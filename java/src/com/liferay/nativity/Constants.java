@@ -45,7 +45,7 @@ public class Constants {
 	public static final String MENU_TEXT = "menuText";
 
 	public static final String NATIVITY_REGISTRY_KEY =
-		"SOFTWARE\\Liferay Inc\\Liferay Nativity";
+		"SOFTWARE\\Box Inc\\Box Desktop";
 
 	public static final String REFRESH_FILES = "refreshFiles";
 
