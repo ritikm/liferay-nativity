@@ -11,6 +11,7 @@
 	<property file="${basedir}/build.${env.HOST}.properties" />
 	<property file="${basedir}/build.${env.HOSTNAME}.properties" />
 	<property file="${basedir}/build.properties" />
+	<property file="${basedir}/build.user.properties" />
 
 	<path id="portal.classpath">
 		<pathelement location="${portal.dir}/portal-impl/classes" />
