@@ -1,5 +1,7 @@
 @echo off
 
+set CLASSPATH=%CLASSPATH%;java/lib/ecj-4.4.2.jar
+
 echo cleaning everything...
 call ant clean
 if %errorlevel% neq 0 (
