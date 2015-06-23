@@ -28,13 +28,6 @@ if %errorlevel% neq 0 (
     exit /b %errorlevel%
 )
 
-echo building jar...
-call ant build-jar
-if %errorlevel% neq 0 (
-    echo ERROR: failed to build jar, with exit code %errorlevel%
-    exit /b %errorlevel%
-)
-
 echo building windows overlays (synced)...
 call ant build-windows-overlays-synced
 if %errorlevel% neq 0 (
@@ -53,13 +46,6 @@ echo building windows overlays (problem)...
 call ant build-windows-overlays-problem
 if %errorlevel% neq 0 (
     echo ERROR: failed to build problem overlay, with exit code %errorlevel%
-    exit /b %errorlevel%
-)
-
-echo moving jar artifact to app/libs...
-move /y dist\liferay-nativity-1.0.2.jar ..\app\libs\
-if %errorlevel% neq 0 (
-    echo ERROR: failed to move jar, with exit code %errorlevel%
     exit /b %errorlevel%
 )
 
