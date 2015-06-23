@@ -21,6 +21,13 @@ if %errorlevel% neq 0 (
     exit /b %errorlevel%
 )
 
+echo building jar...
+call ant build-jar
+if %errorlevel% neq 0 (
+    echo ERROR: failed to build jar, with exit code %errorlevel%
+    exit /b %errorlevel%
+)
+
 echo building windows native utils...
 call ant build-windows-native-util
 if %errorlevel% neq 0 (

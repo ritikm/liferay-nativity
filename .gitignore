@@ -41,3 +41,4 @@ mac/LiferayNativity.xcworkspace/xcshareddata
 java/lib/native
 
 *_x86.dll
+dist/*.jar
